@@ -1,11 +1,9 @@
 Rails.application.routes.draw do
   resources :courses do
-    resources :students 
+    resources :students, controller: 'studentlists' 
   end
 
   resources :students do
-    resources :courses 
+    resources :courses, controller: 'enrollments'
   end
-
-  resources :enrollments
 end

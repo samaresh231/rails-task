@@ -26,21 +26,6 @@ class StudentsController < ApplicationController
         end
     end
 
-    # delete '/students/:id'
-    def destroy
-        begin
-            @student = Student.find(params[:id])
-        
-            if @student.destroy
-                render json: @student
-            else
-                render json: {"message": "Server issue"}
-            end 
-        rescue 
-            render json: {"message": "Student not found"}
-        end
-    end
-
     # put '/students/:id'
     def update
         begin
@@ -60,16 +45,18 @@ class StudentsController < ApplicationController
         end
     end
 
-    # get '/courses/:course_id/students'
-    def index 
+    # delete '/students/:id'
+    def destroy
         begin
-            @course = Course.find(params[:course_id])
-            @enrollments = Enrollment.find_by(course_id: @course.id)
-            @students = Student.where(id: @enrollments)
-            render json: @students
+            @student = Student.find(params[:id])
+        
+            if @student.destroy
+                render json: {"message": "Student successfully deleted"}
+            else
+                render json: {"message": "Server issue"}
+            end 
         rescue 
-            render json: {"message": "no such course_id exists"}
+            render json: {"message": "Student not found"}
         end
     end
-
 end

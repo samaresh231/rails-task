@@ -14,7 +14,6 @@ Student.create({ id: 3, name: "Rawsee"})
 Student.create({ id: 4, name: "Dinesh"})
 Student.create({ id: 5, name: "Ahmed" })
 
-
 Enrollment.create({ id: 1, course_id: 1, student_id: 1})
 Enrollment.create({ id: 2, course_id: 1, student_id: 3})
 Enrollment.create({ id: 3, course_id: 3, student_id: 1})
@@ -25,6 +24,3 @@ Enrollment.create({ id: 7, course_id: 4, student_id: 4})
 Enrollment.create({ id: 8, course_id: 3, student_id: 4})
 Enrollment.create({ id: 9, course_id: 4, student_id: 3})
 Enrollment.create({ id: 10, course_id: 5, student_id: 5})
-
-
-
