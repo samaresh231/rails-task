@@ -1,6 +1,6 @@
 class StudentlistsController < ApplicationController
 
-    #get '/courses/:course_id/students'
+    # get '/courses/:course_id/students'
     def index 
         begin
             @course = Course.find(params[:course_id])
