@@ -1,24 +1,27 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+* setup
 
-Things you may want to cover:
+    - Database used: mysql.
 
-* Ruby version
+    - start mysql server in your system.
 
-* System dependencies
+    - create a database "eLearning" by "create database eLearning" in mysql cli.
 
-* Configuration
+    - change username and password in database.yml.
 
-* Database creation
+    - bundle install
 
-* Database initialization
+    - rails db:migration
 
-* How to run the test suite
+    - rails db:seed
 
-* Services (job queues, cache servers, search engines, etc.)
+    - rails server
 
-* Deployment instructions
+* Database tables
 
-* ...
+    - courses => for storing course name and no. of seats available.
+
+    - students => for storing student name.
+
+    - enrollments => for storing students enrolled in courses.
